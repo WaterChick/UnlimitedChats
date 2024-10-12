@@ -38,19 +38,19 @@ jobs:
     # The USERNAME and TOKEN need to correspond to the credentials environment variables used in
     # the publishing section of your build.gradle
     - name: Build and Publish Bukkit
-      run: ./gradlew :bukkit:publish
+      run: ./gradlew :unlimitedchats-bukkit:publish
       env:
         USERNAME: ${{ github.actor }}
         TOKEN: ${{ secrets.TOKEN }}
 
     - name: Build and Publish Bungee
-      run: ./gradlew :bungee:publish
+      run: ./gradlew :unlimitedchats-bungee:publish
       env:
         USERNAME: ${{ github.actor }}
         TOKEN: ${{ secrets.TOKEN }}
 
     - name: Build and Publish Velocity
-      run: ./gradlew :velocity:publish
+      run: ./gradlew :unlimitedchats-velocity:publish
       env:
         USERNAME: ${{ github.actor }}
         TOKEN: ${{ secrets.TOKEN }}
