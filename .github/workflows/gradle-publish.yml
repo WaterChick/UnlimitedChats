@@ -44,6 +44,8 @@ jobs:
           asset_path: unlimitedchats-bukkit/build/libs/unlimitedchats-bukkit-${{ steps.get_version.outputs.version }}.jar
           asset_name: unlimitedchats-bukkit-${{ steps.get_version.outputs.version }}.jar
           asset_content_type: application/java-archive
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
 
       # Nahraj Bungee JAR soubor
       - name: Upload Bungee JAR as release asset
@@ -53,6 +55,8 @@ jobs:
           asset_path: unlimitedchats-bungee/build/libs/unlimitedchats-bungee-${{ steps.get_version.outputs.version }}.jar
           asset_name: unlimitedchats-bungee-${{ steps.get_version.outputs.version }}.jar
           asset_content_type: application/java-archive
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
 
       # Nahraj Velocity JAR soubor
       - name: Upload Velocity JAR as release asset
@@ -62,3 +66,5 @@ jobs:
           asset_path: unlimitedchats-velocity/build/libs/unlimitedchats-velocity-${{ steps.get_version.outputs.version }}.jar
           asset_name: unlimitedchats-velocity-${{ steps.get_version.outputs.version }}.jar
           asset_content_type: application/java-archive
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
