@@ -32,8 +32,8 @@ publishing {
             name = "GitHubPackages"
             url = uri("https://maven.pkg.github.com/WaterChick/unlimitedchats") // Změň na skutečnou URL repozitáře
             credentials {
-                username = findProperty("gpr.user") as String? ?: "your-username"
-                password = findProperty("gpr.token") as String? ?: "your-token" // nebo tvé heslo
+                username = System.getenv("USERNAME") // Automaticky se nastaví při běhu workflow
+                password = System.getenv("TOKEN") // Automaticky se nastaví při běhu workflow
             }
         }
     }
