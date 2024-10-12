@@ -1,5 +1,6 @@
 plugins {
     id("java")
+    id ("maven-publish")
 }
 
 
@@ -11,6 +12,30 @@ extra["versionName"] = version
 
 repositories {
     mavenCentral()
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("mavenJava") {
+            artifact(tasks.named<Jar>("shadowJar").get()) // Používáme shadowJar jako artefakt
+
+            // Základní metadata
+            groupId = group.toString()
+            artifactId = project.name // změň na tvůj artifact id
+            version = extra["versionName"] as String // změň na požadovanou verzi
+        }
+    }
+
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/WaterChick/unlimitedchats") // Změň na skutečnou URL repozitáře
+            credentials {
+                username = findProperty("gpr.user") as String? ?: "your-username"
+                password = findProperty("gpr.token") as String? ?: "your-token" // nebo tvé heslo
+            }
+        }
+    }
 }
 
 dependencies {
