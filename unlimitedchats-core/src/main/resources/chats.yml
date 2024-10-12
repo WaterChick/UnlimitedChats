@@ -1,0 +1,15 @@
+'1':
+  command: "/staffchat"
+
+  aliases:
+    - "sc"
+    - "staff"
+
+  permission: "uc.staffchat"
+
+  # Available placeholders
+  # %server% - Bungee/Velocity - Replaces with sender's current server
+  # %player% - Sender's name
+  # %message%
+
+  message: "&8[&cStaffChat&8] &6%player%: &7%message%"

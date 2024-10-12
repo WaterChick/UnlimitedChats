@@ -1,0 +1,4 @@
+name: unlimitedchats-bungee
+version: '${version}'
+author: Water_Chick
+main: dev.waterchick.unlimitedchatsbungee.UnlimitedChats

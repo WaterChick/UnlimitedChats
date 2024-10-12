@@ -1,0 +1,14 @@
+prefix: "&8[&aUnlimitedChats&8] &r"
+no_permission: "&cYou don't have permission to execute this command!"
+reloaded: "&7Reloaded messages config.. (Restart required for chats to be changed)"
+supply_message: "&cYou must supply a message."
+help: "&7Usage: &f/uc reload"
+
+# Avilable placeholders:
+# %server% - Bungee/Velocity -Sender's server
+# %chat_command% - Command that was used when sending a message to this chat.
+hover:
+  enabled: true
+  text: "&7Click to send message to this chat"
+  # Suggests chat command
+  command: "%chat_command%"
