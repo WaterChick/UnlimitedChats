@@ -47,11 +47,6 @@ publishing {
     publications {
         mavenJava(MavenPublication) {
             artifact tasks.named('shadowJar').get() // Používáme shadowJar jako artefakt
-
-            // Základní metadata
-            groupId = project.group
-            artifactId = project.name // změň na tvůj artifact id
-            version = project.version // změň na požadovanou verzi
         }
     }
 
