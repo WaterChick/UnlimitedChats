@@ -1,7 +1,6 @@
 plugins {
     id 'java'
     id("com.github.johnrengelman.shadow") version "7.1.0"
-    id ("maven-publish")
 }
 
 
@@ -48,25 +47,6 @@ processResources {
     filteringCharset 'UTF-8'
     filesMatching('bungee.yml') {
         expand props
-    }
-}
-
-publishing {
-    publications {
-        mavenJava(MavenPublication) {
-            artifact tasks.named('shadowJar').get() // Používáme shadowJar jako artefakt
-        }
-    }
-
-    repositories {
-        maven {
-            name = 'GitHubPackages'
-            url = uri('https://maven.pkg.github.com/WaterChick/unlimitedchats') // Změň na skutečnou URL repozitáře
-            credentials {
-                username = System.getenv('USERNAME') // Automaticky se nastaví při běhu workflow
-                password = System.getenv('TOKEN') // Automaticky se nastaví při běhu workflow
-            }
-        }
     }
 }
 
