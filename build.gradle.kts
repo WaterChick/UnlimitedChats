@@ -1,3 +1,4 @@
+
 plugins {
     id("java")
     id ("maven-publish")
@@ -51,4 +52,5 @@ tasks.test {
 allprojects {
     version = findProperty("versionName") ?: "default-version"
 }
+
 
