@@ -31,7 +31,7 @@ public final class UnlimitedChats extends JavaPlugin implements Platform {
         registerCommands();
 
         if(canPAPIHook()){
-            System.out.println(MessageManager.getInstance().prefix+" Successfully hooked to PlaceholderAPI");
+            this.getLogger().info("Successfully hooked to PlaceholderAPI");
         }
     }
 
