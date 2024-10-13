@@ -3,3 +3,5 @@ version: '${version}'
 main: dev.waterchick.unlimitedchatsbukkit.UnlimitedChats
 api-version: '1.16'
 authors: [ Water_Chick ]
+softdepend:
+  - PlaceholderAPI

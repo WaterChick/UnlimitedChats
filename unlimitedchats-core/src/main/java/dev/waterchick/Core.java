@@ -26,6 +26,12 @@ public class Core {
         new MessageManager("UnlimitedChats");
 
         platform.getFolder().mkdirs();
+
+        // Přidání migrace složky
+        FolderMigrator folderMigrator = new FolderMigrator("UnlimitedChats", platform.getFolder().getPath());
+        folderMigrator.migrate(); // Volání metody pro migraci složky
+
+
         loadConfigs();
         loadMessages();
 
@@ -64,4 +70,6 @@ public class Core {
         logger.info(" Server version: " + platform.getServerVersion());
         logger.info("---------------------------");
     }
+
+
 }
