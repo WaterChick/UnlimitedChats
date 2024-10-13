@@ -7,7 +7,7 @@ plugins {
 
 
 group = "dev.waterchick"
-version = "1.0.5"
+version = "1.0.6"
 val versionName: String by extra // Definice versionName
 
 extra["versionName"] = version
